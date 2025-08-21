@@ -1,0 +1,1255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<oval_definitions xmlns="http://oval.mitre.org/XMLSchema/oval-definitions-5" xmlns:oval="http://oval.mitre.org/XMLSchema/oval-common-5" xmlns:unix-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#unix" xmlns:red-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#linux" xmlns:ind-def="http://oval.mitre.org/XMLSchema/oval-definitions-5#independent" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://oval.mitre.org/XMLSchema/oval-common-5 oval-common-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5 oval-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#unix unix-definitions-schema.xsd http://oval.mitre.org/XMLSchema/oval-definitions-5#linux linux-definitions-schema.xsd">
+<generator>
+<oval:product_name>Red Hat OVAL Patch Definition Merger</oval:product_name>
+<oval:product_version>3</oval:product_version>
+<oval:schema_version>5.10</oval:schema_version>
+<oval:timestamp>2025-07-04T02:37:12</oval:timestamp>
+<oval:content_version>1751596632</oval:content_version>
+</generator>
+<definitions>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20227411" version="639">
+ <metadata>
+  <title>RHSA-2022:7411: Red Hat Single Sign-On 7.6.1 security update on RHEL 9 (Moderate)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2022:7411" ref_url="https://access.redhat.com/errata/RHSA-2022:7411" source="RHSA"/>
+  <reference ref_id="CVE-2020-36518" ref_url="https://access.redhat.com/security/cve/CVE-2020-36518" source="CVE"/>
+  <reference ref_id="CVE-2021-42392" ref_url="https://access.redhat.com/security/cve/CVE-2021-42392" source="CVE"/>
+  <reference ref_id="CVE-2021-42575" ref_url="https://access.redhat.com/security/cve/CVE-2021-42575" source="CVE"/>
+  <reference ref_id="CVE-2021-43797" ref_url="https://access.redhat.com/security/cve/CVE-2021-43797" source="CVE"/>
+  <reference ref_id="CVE-2022-0084" ref_url="https://access.redhat.com/security/cve/CVE-2022-0084" source="CVE"/>
+  <reference ref_id="CVE-2022-0225" ref_url="https://access.redhat.com/security/cve/CVE-2022-0225" source="CVE"/>
+  <reference ref_id="CVE-2022-0853" ref_url="https://access.redhat.com/security/cve/CVE-2022-0853" source="CVE"/>
+  <reference ref_id="CVE-2022-0866" ref_url="https://access.redhat.com/security/cve/CVE-2022-0866" source="CVE"/>
+  <reference ref_id="CVE-2022-1319" ref_url="https://access.redhat.com/security/cve/CVE-2022-1319" source="CVE"/>
+  <reference ref_id="CVE-2022-23913" ref_url="https://access.redhat.com/security/cve/CVE-2022-23913" source="CVE"/>
+  <reference ref_id="CVE-2022-2668" ref_url="https://access.redhat.com/security/cve/CVE-2022-2668" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.1 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.0, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* jackson-databind: denial of service via a large depth of nested objects (CVE-2020-36518)
+
+* h2: Remote Code Execution in Console (CVE-2021-42392)
+
+* netty: control chars in header names may lead to HTTP request smuggling (CVE-2021-43797)
+
+* xnio: org.xnio.StreamConnection.notifyReadClosed log to debug instead of stderr (CVE-2022-0084)
+
+* keycloak: Stored XSS in groups dropdown (CVE-2022-0225)
+
+* wildfly: Wildfly management of EJB Session context returns wrong caller principal with Elytron Security enabled (CVE-2022-0866)
+
+* keycloak: Uploading of SAML javascript protocol mapper scripts through the admin console (CVE-2022-2668)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Moderate</severity>
+   <rights>Copyright 2022 Red Hat, Inc.</rights>
+   <issued date="2022-11-03"/>
+   <updated date="2022-11-03"/>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2020-36518" impact="moderate" public="20200813">CVE-2020-36518</cve>
+   <cve cvss3="9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-502" href="https://access.redhat.com/security/cve/CVE-2021-42392" impact="low" public="20220104">CVE-2021-42392</cve>
+   <cve cvss3="9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2021-42575" impact="moderate" public="20211018">CVE-2021-42575</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N" cwe="CWE-444" href="https://access.redhat.com/security/cve/CVE-2021-43797" impact="low" public="20211209">CVE-2021-43797</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2022-0084" impact="moderate" public="20220315">CVE-2022-0084</cve>
+   <cve cvss3="5.7/CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:H/I:L/A:L" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2022-0225" impact="moderate" public="20220113">CVE-2022-0225</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H" cwe="CWE-401" href="https://access.redhat.com/security/cve/CVE-2022-0853" impact="low" public="20220304">CVE-2022-0853</cve>
+   <cve cvss3="3.1/CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:L/I:N/A:N" cwe="CWE-863-&gt;CWE-1220" href="https://access.redhat.com/security/cve/CVE-2022-0866" impact="moderate" public="20220503">CVE-2022-0866</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-252" href="https://access.redhat.com/security/cve/CVE-2022-1319" impact="moderate" public="20220411">CVE-2022-1319</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400-&gt;CWE-770" href="https://access.redhat.com/security/cve/CVE-2022-23913" impact="moderate" public="20220204">CVE-2022-23913</cve>
+   <cve cvss3="6.4/CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-440" href="https://access.redhat.com/security/cve/CVE-2022-2668" impact="moderate" public="20220804">CVE-2022-2668</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2027195" id="2027195">owasp-java-html-sanitizer: improper policies enforcement may lead to remote code execution</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2031958" id="2031958">netty: control chars in header names may lead to HTTP request smuggling</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2039403" id="2039403">h2: Remote Code Execution in Console</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2040268" id="2040268">keycloak: Stored XSS in groups dropdown</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2060725" id="2060725">jboss-client: memory leakage in remote client transaction</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2060929" id="2060929">wildfly: Wildfly management of EJB Session context returns wrong caller principal with Elytron Security enabled</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2063601" id="2063601">artemis-commons: Apache ActiveMQ Artemis DoS</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2064226" id="2064226">xnio: org.xnio.StreamConnection.notifyReadClosed log to debug instead of stderr</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2064698" id="2064698">jackson-databind: denial of service via a large depth of nested objects</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2073890" id="2073890">undertow: Double AJP response for 400 from EAP 7 results in CPING failures</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2115392" id="2115392">keycloak: Uploading of SAML javascript protocol mapper scripts through the admin console</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.3-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.3-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7 is earlier than 0:1-5.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411005"/>
+     <criterion comment="rh-sso7 is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411006"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-runtime is earlier than 0:1-5.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411007"/>
+     <criterion comment="rh-sso7-runtime is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411008"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-javapackages-filesystem is earlier than 0:6.0.0-7.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411009"/>
+     <criterion comment="rh-sso7-javapackages-filesystem is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411010"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-javapackages-tools is earlier than 0:6.0.0-7.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411011"/>
+     <criterion comment="rh-sso7-javapackages-tools is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411012"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-python3-javapackages is earlier than 0:6.0.0-7.el9sso" test_ref="oval:com.redhat.rhsa:tst:20227411013"/>
+     <criterion comment="rh-sso7-python3-javapackages is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411014"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20228963" version="637">
+ <metadata>
+  <title>RHSA-2022:8963: Red Hat Single Sign-On 7.6.1 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2022:8963" ref_url="https://access.redhat.com/errata/RHSA-2022:8963" source="RHSA"/>
+  <reference ref_id="CVE-2022-3782" ref_url="https://access.redhat.com/security/cve/CVE-2022-3782" source="CVE"/>
+  <reference ref_id="CVE-2022-3916" ref_url="https://access.redhat.com/security/cve/CVE-2022-3916" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.1 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.1, and includes the security fixes listed below.
+
+Security Fix(es):
+
+* keycloak: path traversal via double URL encoding (CVE-2022-3782)
+
+* keycloak: Session takeover with OIDC offline refreshtokens (CVE-2022-3916)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2022 Red Hat, Inc.</rights>
+   <issued date="2022-12-13"/>
+   <updated date="2022-12-13"/>
+   <cve cvss3="8.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N" cwe="CWE-22" href="https://access.redhat.com/security/cve/CVE-2022-3782" impact="important" public="20221212">CVE-2022-3782</cve>
+   <cve cvss3="6.8/CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N" cwe="CWE-384" href="https://access.redhat.com/security/cve/CVE-2022-3916" impact="moderate" public="20221109">CVE-2022-3916</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2138971" id="2138971">keycloak: path traversal via double URL encoding</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2141404" id="2141404">keycloak: Session takeover with OIDC offline refreshtokens</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.3-1.redhat_00002.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20228963001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.3-1.redhat_00002.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20228963003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20231045" version="641">
+ <metadata>
+  <title>RHSA-2023:1045: Red Hat Single Sign-On 7.6.2 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:1045" ref_url="https://access.redhat.com/errata/RHSA-2023:1045" source="RHSA"/>
+  <reference ref_id="CVE-2018-14040" ref_url="https://access.redhat.com/security/cve/CVE-2018-14040" source="CVE"/>
+  <reference ref_id="CVE-2018-14042" ref_url="https://access.redhat.com/security/cve/CVE-2018-14042" source="CVE"/>
+  <reference ref_id="CVE-2019-11358" ref_url="https://access.redhat.com/security/cve/CVE-2019-11358" source="CVE"/>
+  <reference ref_id="CVE-2020-11022" ref_url="https://access.redhat.com/security/cve/CVE-2020-11022" source="CVE"/>
+  <reference ref_id="CVE-2020-11023" ref_url="https://access.redhat.com/security/cve/CVE-2020-11023" source="CVE"/>
+  <reference ref_id="CVE-2021-35065" ref_url="https://access.redhat.com/security/cve/CVE-2021-35065" source="CVE"/>
+  <reference ref_id="CVE-2021-44906" ref_url="https://access.redhat.com/security/cve/CVE-2021-44906" source="CVE"/>
+  <reference ref_id="CVE-2022-1274" ref_url="https://access.redhat.com/security/cve/CVE-2022-1274" source="CVE"/>
+  <reference ref_id="CVE-2022-1438" ref_url="https://access.redhat.com/security/cve/CVE-2022-1438" source="CVE"/>
+  <reference ref_id="CVE-2022-1471" ref_url="https://access.redhat.com/security/cve/CVE-2022-1471" source="CVE"/>
+  <reference ref_id="CVE-2022-24785" ref_url="https://access.redhat.com/security/cve/CVE-2022-24785" source="CVE"/>
+  <reference ref_id="CVE-2022-25857" ref_url="https://access.redhat.com/security/cve/CVE-2022-25857" source="CVE"/>
+  <reference ref_id="CVE-2022-2764" ref_url="https://access.redhat.com/security/cve/CVE-2022-2764" source="CVE"/>
+  <reference ref_id="CVE-2022-31129" ref_url="https://access.redhat.com/security/cve/CVE-2022-31129" source="CVE"/>
+  <reference ref_id="CVE-2022-37603" ref_url="https://access.redhat.com/security/cve/CVE-2022-37603" source="CVE"/>
+  <reference ref_id="CVE-2022-38749" ref_url="https://access.redhat.com/security/cve/CVE-2022-38749" source="CVE"/>
+  <reference ref_id="CVE-2022-38750" ref_url="https://access.redhat.com/security/cve/CVE-2022-38750" source="CVE"/>
+  <reference ref_id="CVE-2022-38751" ref_url="https://access.redhat.com/security/cve/CVE-2022-38751" source="CVE"/>
+  <reference ref_id="CVE-2022-3916" ref_url="https://access.redhat.com/security/cve/CVE-2022-3916" source="CVE"/>
+  <reference ref_id="CVE-2022-40149" ref_url="https://access.redhat.com/security/cve/CVE-2022-40149" source="CVE"/>
+  <reference ref_id="CVE-2022-40150" ref_url="https://access.redhat.com/security/cve/CVE-2022-40150" source="CVE"/>
+  <reference ref_id="CVE-2022-4137" ref_url="https://access.redhat.com/security/cve/CVE-2022-4137" source="CVE"/>
+  <reference ref_id="CVE-2022-42003" ref_url="https://access.redhat.com/security/cve/CVE-2022-42003" source="CVE"/>
+  <reference ref_id="CVE-2022-42004" ref_url="https://access.redhat.com/security/cve/CVE-2022-42004" source="CVE"/>
+  <reference ref_id="CVE-2022-45047" ref_url="https://access.redhat.com/security/cve/CVE-2022-45047" source="CVE"/>
+  <reference ref_id="CVE-2022-45693" ref_url="https://access.redhat.com/security/cve/CVE-2022-45693" source="CVE"/>
+  <reference ref_id="CVE-2022-46175" ref_url="https://access.redhat.com/security/cve/CVE-2022-46175" source="CVE"/>
+  <reference ref_id="CVE-2022-46363" ref_url="https://access.redhat.com/security/cve/CVE-2022-46363" source="CVE"/>
+  <reference ref_id="CVE-2022-46364" ref_url="https://access.redhat.com/security/cve/CVE-2022-46364" source="CVE"/>
+  <reference ref_id="CVE-2023-0091" ref_url="https://access.redhat.com/security/cve/CVE-2023-0091" source="CVE"/>
+  <reference ref_id="CVE-2023-0264" ref_url="https://access.redhat.com/security/cve/CVE-2023-0264" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.2 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.1, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* keycloak: XSS on impersonation under specific circumstances (CVE-2022-1438)
+* Moment.js: Path traversal in moment.locale (CVE-2022-24785)
+* keycloak: missing email notification template allowlist (CVE-2022-1274)
+* keycloak: minimist: prototype pollution (CVE-2021-44906)
+* moment: inefficient parsing algorithm resulting in DoS (CVE-2022-31129)
+* undertow: DoS can be achieved as Undertow server waits for the LAST_CHUNK forever for EJB invocations (CVE-2022-2764)
+* snakeyaml: Denial of Service due to missing nested depth limitation for collections (CVE-2022-25857)
+* loader-utils: loader-utils:Regular expression denial of service (CVE-2022-37603)
+* keycloak: Session takeover with OIDC offline refreshtokens (CVE-2022-3916)
+* keycloak: path traversal via double URL encoding (CVE-2022-3782)
+* snakeyaml: Uncaught exception in org.yaml.snakeyaml.composer.Composer.composeSequenceNode (CVE-2022-38749)
+* snakeyaml: Uncaught exception in java.base/java.util.regex.Pattern$Ques.match (CVE-2022-38751)
+* snakeyaml: Uncaught exception in org.yaml.snakeyaml.constructor.BaseConstructor.constructObject (CVE-2022-38750)
+* keycloak: Client Registration endpoint does not check token revocation (CVE-2023-0091)
+* keycloak: glob-parent: Regular Expression Denial of Service (CVE-2021-35065)
+* json5: Prototype Pollution in JSON5 via Parse Method (CVE-2022-46175)
+* keycloak: keycloak: user impersonation via stolen uuid code (CVE-2023-0264)
+* snakeyaml: Constructor Deserialization Remote Code Execution (CVE-2022-1471)
+* CXF: Apache CXF: SSRF Vulnerability (CVE-2022-46364)
+* rcue-bootstrap: bootstrap: Cross-site Scripting (XSS) in the data-container property of tooltip (CVE-2018-14042)
+* jettison: If the value in map is the map's self, the new new JSONObject(map) cause StackOverflowError which may lead to dos (CVE-2022-45693)
+* sshd-common: mina-sshd: Java unsafe deserialization vulnerability (CVE-2022-45047)
+* jettison: memory exhaustion via user-supplied XML or JSON data (CVE-2022-40150)
+* jettison: parser crash by stackoverflow (CVE-2022-40149)
+* jackson-databind: use of deeply nested arrays (CVE-2022-42004)
+* jackson-databind: deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS (CVE-2022-42003)
+* jquery: Cross-site scripting due to improper injQuery.htmlPrefilter method (CVE-2020-11022)
+* jquery: Passing HTML containing &lt;option&gt; elements to manipulation methods could result in untrusted code execution (CVE-2020-11023)
+* bootstrap: Cross-site Scripting (XSS) in the collapse data-parent attribute (CVE-2018-14040)
+* jquery: Prototype pollution in object's prototype leading to denial of service, remote code execution, or property injection (CVE-2019-11358)
+* CXF: Apache CXF: directory listing / code exfiltration (CVE-2022-46363)
+* keycloak: reflected XSS attack (CVE-2022-4137)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-03-01"/>
+   <updated date="2023-03-01"/>
+   <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2018-14040" impact="moderate" public="20180529">CVE-2018-14040</cve>
+   <cve cvss3="6.1/CVSS:3.0/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2018-14042" impact="moderate" public="20180529">CVE-2018-14042</cve>
+   <cve cvss3="5.6/CVSS:3.0/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2019-11358" impact="moderate" public="20190327">CVE-2019-11358</cve>
+   <cve cvss3="6.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2020-11022" impact="moderate" public="20200423">CVE-2020-11022</cve>
+   <cve cvss3="6.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2020-11023" impact="moderate" public="20200429">CVE-2020-11023</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2021-35065" impact="low" public="20221226">CVE-2021-35065</cve>
+   <cve cvss3="3.1/CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:N/I:L/A:N" cwe="CWE-1321" href="https://access.redhat.com/security/cve/CVE-2021-44906" impact="moderate" public="20220310">CVE-2021-44906</cve>
+   <cve cvss3="7.6/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:C/C:H/I:L/A:N" cwe="CWE-80" href="https://access.redhat.com/security/cve/CVE-2022-1274" impact="moderate" public="20230228:1857">CVE-2022-1274</cve>
+   <cve cvss3="6.4/CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2022-1438" impact="moderate" public="20230228:1856">CVE-2022-1438</cve>
+   <cve cvss3="9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-20-&gt;CWE-1066-&gt;CWE-502" href="https://access.redhat.com/security/cve/CVE-2022-1471" impact="important" public="20221013">CVE-2022-1471</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N" cwe="CWE-22" href="https://access.redhat.com/security/cve/CVE-2022-24785" impact="moderate" public="20220404">CVE-2022-24785</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2022-25857" impact="low" public="20220830">CVE-2022-25857</cve>
+   <cve cvss3="4.2/CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:N/I:N/A:H" href="https://access.redhat.com/security/cve/CVE-2022-2764" impact="low" public="20220811">CVE-2022-2764</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2022-31129" impact="important" public="20220706">CVE-2022-31129</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-185" href="https://access.redhat.com/security/cve/CVE-2022-37603" impact="moderate" public="20221006">CVE-2022-37603</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-38749" impact="moderate" public="20220905">CVE-2022-38749</cve>
+   <cve cvss3="5.5/CVSS:3.1/AV:L/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-38750" impact="moderate" public="20220905">CVE-2022-38750</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-38751" impact="moderate" public="20220905">CVE-2022-38751</cve>
+   <cve cvss3="6.8/CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:U/C:H/I:H/A:N" cwe="CWE-384" href="https://access.redhat.com/security/cve/CVE-2022-3916" impact="moderate" public="20221109">CVE-2022-3916</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-121-&gt;CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-40149" impact="moderate" public="20220920">CVE-2022-40149</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2022-40150" impact="low" public="20220920">CVE-2022-40150</cve>
+   <cve cvss3="8.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N" cwe="CWE-81" href="https://access.redhat.com/security/cve/CVE-2022-4137" impact="important" public="20230301:1356">CVE-2022-4137</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-502" href="https://access.redhat.com/security/cve/CVE-2022-42003" impact="moderate" public="20221002">CVE-2022-42003</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-502" href="https://access.redhat.com/security/cve/CVE-2022-42004" impact="moderate" public="20221002">CVE-2022-42004</cve>
+   <cve cvss3="9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-502" href="https://access.redhat.com/security/cve/CVE-2022-45047" impact="important" public="20221116">CVE-2022-45047</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-45693" impact="moderate" public="20221213">CVE-2022-45693</cve>
+   <cve cvss3="8.8/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-1321" href="https://access.redhat.com/security/cve/CVE-2022-46175" impact="low" public="20221224">CVE-2022-46175</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2022-46363" impact="moderate" public="20221213">CVE-2022-46363</cve>
+   <cve cvss3="9.8/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" cwe="CWE-918" href="https://access.redhat.com/security/cve/CVE-2022-46364" impact="low" public="20221213">CVE-2022-46364</cve>
+   <cve cvss3="3.8/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2023-0091" impact="low" public="20221028">CVE-2023-0091</cve>
+   <cve cvss3="4.6/CVSS:3.1/AV:A/AC:H/PR:L/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-303" href="https://access.redhat.com/security/cve/CVE-2023-0264" impact="moderate" public="20230228:1858">CVE-2023-0264</cve>
+   <bugzilla href="https://bugzilla.redhat.com/1601614" id="1601614">bootstrap: Cross-site Scripting (XSS) in the collapse data-parent attribute</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/1601617" id="1601617">bootstrap: Cross-site Scripting (XSS) in the data-container property of tooltip</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/1701972" id="1701972">jquery: Prototype pollution in object's prototype leading to denial of service, remote code execution, or property injection</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/1828406" id="1828406">jquery: Cross-site scripting due to improper injQuery.htmlPrefilter method</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/1850004" id="1850004">jquery: Untrusted code execution via &lt;option&gt; tag in HTML passed to DOM manipulation methods</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2031904" id="2031904">keycloak: XSS on impersonation under specific circumstances</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2066009" id="2066009">minimist: prototype pollution</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2072009" id="2072009">Moment.js: Path traversal  in moment.locale</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2073157" id="2073157">keycloak: HTML injection in execute-actions-email Admin REST API</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2105075" id="2105075">moment: inefficient parsing algorithm resulting in DoS</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2117506" id="2117506">Undertow: DoS can be achieved as Undertow server waits for the LAST_CHUNK forever for EJB invocations</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2126789" id="2126789">snakeyaml: Denial of Service due to missing nested depth limitation for collections</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2129706" id="2129706">snakeyaml: Uncaught exception in org.yaml.snakeyaml.composer.Composer.composeSequenceNode</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2129707" id="2129707">snakeyaml: Uncaught exception in org.yaml.snakeyaml.constructor.BaseConstructor.constructObject</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2129709" id="2129709">snakeyaml: Uncaught exception in java.base/java.util.regex.Pattern$Ques.match</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2135244" id="2135244">jackson-databind: deep wrapper array nesting wrt UNWRAP_SINGLE_VALUE_ARRAYS</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2135247" id="2135247">jackson-databind: use of deeply nested arrays</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2135770" id="2135770">jettison: memory exhaustion via user-supplied XML or JSON data</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2135771" id="2135771">jettison: parser crash by stackoverflow</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2140597" id="2140597">loader-utils: Regular expression denial of service</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2141404" id="2141404">keycloak: Session takeover with OIDC offline refreshtokens</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2145194" id="2145194">mina-sshd: Java unsafe deserialization vulnerability</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2148496" id="2148496">keycloak: reflected XSS attack</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2150009" id="2150009">SnakeYaml: Constructor Deserialization Remote Code Execution</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2155681" id="2155681">CXF: directory listing / code exfiltration</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2155682" id="2155682">CXF: SSRF Vulnerability</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2155970" id="2155970">jettison: If the value in map is the map's self, the new new JSONObject(map) cause StackOverflowError which may lead to dos</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2156263" id="2156263">json5: Prototype Pollution in JSON5 via Parse Method</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2156324" id="2156324">glob-parent: Regular Expression Denial of Service</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2158585" id="2158585">keycloak: Client Registration endpoint does not check token revocation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2160585" id="2160585">keycloak: user impersonation via stolen uuid code</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.6-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20231045001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.6-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20231045003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20232707" version="638">
+ <metadata>
+  <title>RHSA-2023:2707: Red Hat Single Sign-On 7.6.3 security update on RHEL 9 (Moderate)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:2707" ref_url="https://access.redhat.com/errata/RHSA-2023:2707" source="RHSA"/>
+  <reference ref_id="CVE-2021-0341" ref_url="https://access.redhat.com/security/cve/CVE-2021-0341" source="CVE"/>
+  <reference ref_id="CVE-2022-38752" ref_url="https://access.redhat.com/security/cve/CVE-2022-38752" source="CVE"/>
+  <reference ref_id="CVE-2022-41854" ref_url="https://access.redhat.com/security/cve/CVE-2022-41854" source="CVE"/>
+  <reference ref_id="CVE-2022-41881" ref_url="https://access.redhat.com/security/cve/CVE-2022-41881" source="CVE"/>
+  <reference ref_id="CVE-2022-4492" ref_url="https://access.redhat.com/security/cve/CVE-2022-4492" source="CVE"/>
+  <reference ref_id="CVE-2022-45787" ref_url="https://access.redhat.com/security/cve/CVE-2022-45787" source="CVE"/>
+  <reference ref_id="CVE-2023-0482" ref_url="https://access.redhat.com/security/cve/CVE-2023-0482" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.3 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.2, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* okhttp: information disclosure via improperly used cryptographic function (CVE-2021-0341)
+
+* undertow: Server identity in https connection is not checked by the undertow client (CVE-2022-4492)
+
+* snakeyaml: Uncaught exception in java.base/java.util.ArrayList.hashCode (CVE-2022-38752)
+
+* dev-java/snakeyaml: DoS via stack overflow (CVE-2022-41854)
+
+* codec-haproxy: HAProxyMessageDecoder Stack Exhaustion DoS (CVE-2022-41881)
+
+* apache-james-mime4j: Temporary File Information Disclosure in MIME4J TempFileStorageProvider (CVE-2022-45787)
+
+* RESTEasy: creation of insecure temp files (CVE-2023-0482)
+
+For more details about the security issue(s), including the impact, a CVSS score, acknowledgments, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Moderate</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-05-10"/>
+   <updated date="2023-05-10"/>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-295" href="https://access.redhat.com/security/cve/CVE-2021-0341" impact="moderate" public="20210210">CVE-2021-0341</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-38752" impact="moderate" public="20220905">CVE-2022-38752</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:H" cwe="CWE-787" href="https://access.redhat.com/security/cve/CVE-2022-41854" impact="moderate" public="20221113">CVE-2022-41854</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-674" href="https://access.redhat.com/security/cve/CVE-2022-41881" impact="moderate" public="20221212">CVE-2022-41881</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N" cwe="CWE-550" href="https://access.redhat.com/security/cve/CVE-2022-4492" impact="moderate" public="20221214">CVE-2022-4492</cve>
+   <cve cvss3="5.5/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-200" href="https://access.redhat.com/security/cve/CVE-2022-45787" impact="moderate" public="20230106">CVE-2022-45787</cve>
+   <cve cvss3="5.3/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-378" href="https://access.redhat.com/security/cve/CVE-2023-0482" impact="low" public="20230131">CVE-2023-0482</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2129710" id="2129710">snakeyaml: Uncaught exception in java.base/java.util.ArrayList.hashCode</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2151988" id="2151988">dev-java/snakeyaml: DoS via stack overflow</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2153260" id="2153260">undertow: Server identity in https connection is not checked by the undertow client</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2153379" id="2153379">codec-haproxy: HAProxyMessageDecoder Stack Exhaustion DoS</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2154086" id="2154086">okhttp: information disclosure via improperly used cryptographic function</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2158916" id="2158916">apache-james-mime4j: Temporary File Information Disclosure in MIME4J TempFileStorageProvider</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2166004" id="2166004">RESTEasy: creation of insecure temp files</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.7-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20232707001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.7-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20232707003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20233885" version="638">
+ <metadata>
+  <title>RHSA-2023:3885: Red Hat Single Sign-On 7.6.4 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:3885" ref_url="https://access.redhat.com/errata/RHSA-2023:3885" source="RHSA"/>
+  <reference ref_id="CVE-2022-4361" ref_url="https://access.redhat.com/security/cve/CVE-2022-4361" source="CVE"/>
+  <reference ref_id="CVE-2023-1108" ref_url="https://access.redhat.com/security/cve/CVE-2023-1108" source="CVE"/>
+  <reference ref_id="CVE-2023-1664" ref_url="https://access.redhat.com/security/cve/CVE-2023-1664" source="CVE"/>
+  <reference ref_id="CVE-2023-2422" ref_url="https://access.redhat.com/security/cve/CVE-2023-2422" source="CVE"/>
+  <reference ref_id="CVE-2023-2585" ref_url="https://access.redhat.com/security/cve/CVE-2023-2585" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.4 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.3, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* keycloak: Cross-site scripting when validating URI-schemes on SAML and OIDC (CVE-2022-4361)
+
+* undertow: Infinite loop in SslConduit during close (CVE-2023-1108)
+
+* keycloak: oauth client impersonation (CVE-2023-2422)
+
+* keycloak: Untrusted Certificate Validation (CVE-2023-1664)
+
+* keycloak: client access via device auth request spoof (CVE-2023-2585)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-06-27"/>
+   <updated date="2023-06-27"/>
+   <cve cvss3="8.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N" cwe="CWE-79" href="https://access.redhat.com/security/cve/CVE-2022-4361" impact="important" public="20230627">CVE-2022-4361</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-835" href="https://access.redhat.com/security/cve/CVE-2023-1108" impact="important" public="20230307">CVE-2023-1108</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-295" href="https://access.redhat.com/security/cve/CVE-2023-1664" impact="low" public="20230327">CVE-2023-1664</cve>
+   <cve cvss3="5.5/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:L/A:N" cwe="CWE-295" href="https://access.redhat.com/security/cve/CVE-2023-2422" impact="moderate" public="20230626">CVE-2023-2422</cve>
+   <cve cvss3="3.5/CVSS:3.1/AV:N/AC:L/PR:H/UI:R/S:U/C:L/I:L/A:N" cwe="CWE-358" href="https://access.redhat.com/security/cve/CVE-2023-2585" impact="low" public="20230626">CVE-2023-2585</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2151618" id="2151618">RHSSO: XSS due to lax URI scheme validation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2174246" id="2174246">Undertow: Infinite loop in SslConduit during close</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2182196" id="2182196">keycloak: Untrusted Certificate Validation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2191668" id="2191668">keycloak: oauth client impersonation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2196335" id="2196335">keycloak: client access via device auth request spoof</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.8-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20233885001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.8-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20233885003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20234920" version="638">
+ <metadata>
+  <title>RHSA-2023:4920: Red Hat Single Sign-On 7.6.5 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:4920" ref_url="https://access.redhat.com/errata/RHSA-2023:4920" source="RHSA"/>
+  <reference ref_id="CVE-2021-46877" ref_url="https://access.redhat.com/security/cve/CVE-2021-46877" source="CVE"/>
+  <reference ref_id="CVE-2023-1436" ref_url="https://access.redhat.com/security/cve/CVE-2023-1436" source="CVE"/>
+  <reference ref_id="CVE-2023-3223" ref_url="https://access.redhat.com/security/cve/CVE-2023-3223" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.5 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.4, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* undertow: OutOfMemoryError due to @MultipartConfig handling (CVE-2023-3223)
+
+* jackson-databind: Possible DoS if using JDK serialization to serialize JsonNode (CVE-2021-46877)
+
+* jettison: Uncontrolled Recursion in JSONArray (CVE-2023-1436)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-08-31"/>
+   <updated date="2023-08-31"/>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2021-46877" impact="moderate" public="20230319">CVE-2021-46877</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-674" href="https://access.redhat.com/security/cve/CVE-2023-1436" impact="moderate" public="20230322">CVE-2023-1436</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-789" href="https://access.redhat.com/security/cve/CVE-2023-3223" impact="important" public="20230807">CVE-2023-3223</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2182788" id="2182788">jettison: Uncontrolled Recursion in JSONArray</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2185707" id="2185707">jackson-databind: Possible DoS if using JDK serialization to serialize JsonNode</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2209689" id="2209689">undertow: OutOfMemoryError due to @MultipartConfig handling</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.9-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20234920001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.9-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20234920003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20237484" version="639">
+ <metadata>
+  <title>RHSA-2023:7484: Red Hat Single Sign-On 7.6.6 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:7484" ref_url="https://access.redhat.com/errata/RHSA-2023:7484" source="RHSA"/>
+  <reference ref_id="CVE-2023-0105" ref_url="https://access.redhat.com/security/cve/CVE-2023-0105" source="CVE"/>
+  <reference ref_id="CVE-2023-33201" ref_url="https://access.redhat.com/security/cve/CVE-2023-33201" source="CVE"/>
+  <reference ref_id="CVE-2023-44487" ref_url="https://access.redhat.com/security/cve/CVE-2023-44487" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.6 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.5, and includes bug fixes and enhancements.
+
+Security Fix(es):
+
+* undertow: HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable to a DDoS attack (Rapid Reset Attack) (CVE-2023-44487)
+* netty-codec-http2: HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable to a DDoS attack (Rapid Reset Attack) (CVE-2023-44487)
+* bouncycastle: potential blind LDAP injection attack using a self-signed certificate (CVE-2023-33201)
+* keycloak: impersonation and lockout possible through incorrect handling of email trust (CVE-2023-0105)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-11-24"/>
+   <updated date="2023-11-24"/>
+   <cve cvss3="6.3/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L" cwe="CWE-841" href="https://access.redhat.com/security/cve/CVE-2023-0105" impact="moderate" public="20230106">CVE-2023-0105</cve>
+   <cve cvss3="5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N" cwe="CWE-200" href="https://access.redhat.com/security/cve/CVE-2023-33201" impact="moderate" public="20230616">CVE-2023-33201</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2023-44487" impact="important" public="20231010">CVE-2023-44487</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2158910" id="2158910">keycloak: impersonation and lockout possible through incorrect handling of email trust</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2215465" id="2215465">bouncycastle: potential  blind LDAP injection attack using a self-signed certificate</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2242803" id="2242803">HTTP/2: Multiple HTTP/2 enabled web servers are vulnerable to a DDoS attack (Rapid Reset Attack)</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.11-2.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20237484001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-2.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20237484003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20237855" version="636">
+ <metadata>
+  <title>RHSA-2023:7855: Red Hat Single Sign-On 7.6.6 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2023:7855" ref_url="https://access.redhat.com/errata/RHSA-2023:7855" source="RHSA"/>
+  <reference ref_id="CVE-2023-6134" ref_url="https://access.redhat.com/security/cve/CVE-2023-6134" source="CVE"/>
+  <reference ref_id="CVE-2023-6291" ref_url="https://access.redhat.com/security/cve/CVE-2023-6291" source="CVE"/>
+  <reference ref_id="CVE-2023-6563" ref_url="https://access.redhat.com/security/cve/CVE-2023-6563" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.6 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.5, and includes bug fixes and enhancements.
+
+Security Fix(es):
+* keycloak: redirect_uri validation logic that allows for a bypass of otherwise explicitly allowed hosts (CVE-2023-6134)
+* keycloak: reflected XSS via wildcard in OIDC redirect_uri (CVE-2023-6291)
+* keycloak: offline session token DoS (CVE-2023-6563)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2023 Red Hat, Inc.</rights>
+   <issued date="2023-12-14"/>
+   <updated date="2023-12-14"/>
+   <cve cvss3="4.6/CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N" cwe="CWE-74-&gt;CWE-79" href="https://access.redhat.com/security/cve/CVE-2023-6134" impact="moderate" public="20231114">CVE-2023-6134</cve>
+   <cve cvss3="7.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L" cwe="CWE-601" href="https://access.redhat.com/security/cve/CVE-2023-6291" impact="important" public="20231214">CVE-2023-6291</cve>
+   <cve cvss3="7.7/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:C/C:N/I:N/A:H" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2023-6563" impact="important" public="20231214">CVE-2023-6563</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2249673" id="2249673">keycloak: reflected XSS via wildcard in OIDC redirect_uri</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2251407" id="2251407">keycloak: redirect_uri validation bypass</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2253308" id="2253308">keycloak: offline session token DoS</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.11-2.redhat_00003.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20237855001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-2.redhat_00003.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20237855003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20240096" version="635">
+ <metadata>
+  <title>RHSA-2024:0096: Red Hat Single Sign-On 7.6.6 security update on RHEL 9 (Moderate)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:0096" ref_url="https://access.redhat.com/errata/RHSA-2024:0096" source="RHSA"/>
+  <reference ref_id="CVE-2022-2232" ref_url="https://access.redhat.com/security/cve/CVE-2022-2232" source="CVE"/>
+  <reference ref_id="CVE-2023-6927" ref_url="https://access.redhat.com/security/cve/CVE-2023-6927" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.6 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.5, and includes bug fixes and enhancements.
+
+Security Fix(es):
+* open redirect via &quot;form_post.jwt&quot; JARM response mode (CVE-2023-6927)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Moderate</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-01-09"/>
+   <updated date="2024-01-09"/>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-20" href="https://access.redhat.com/security/cve/CVE-2022-2232" impact="low" public="20231129">CVE-2022-2232</cve>
+   <cve cvss3="4.6/CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N" cwe="CWE-601" href="https://access.redhat.com/security/cve/CVE-2023-6927" impact="moderate" public="20231218">CVE-2023-6927</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2096994" id="2096994">keycloak: LDAP injection on username input</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2255027" id="2255027">keycloak: open redirect via &quot;form_post.jwt&quot; JARM response mode</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.11-3.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20240096001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-3.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20240096003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20240800" version="637">
+ <metadata>
+  <title>RHSA-2024:0800: Red Hat Single Sign-On 7.6.7 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:0800" ref_url="https://access.redhat.com/errata/RHSA-2024:0800" source="RHSA"/>
+  <reference ref_id="CVE-2023-26048" ref_url="https://access.redhat.com/security/cve/CVE-2023-26048" source="CVE"/>
+  <reference ref_id="CVE-2023-26049" ref_url="https://access.redhat.com/security/cve/CVE-2023-26049" source="CVE"/>
+  <reference ref_id="CVE-2023-2976" ref_url="https://access.redhat.com/security/cve/CVE-2023-2976" source="CVE"/>
+  <reference ref_id="CVE-2023-44483" ref_url="https://access.redhat.com/security/cve/CVE-2023-44483" source="CVE"/>
+  <reference ref_id="CVE-2023-6134" ref_url="https://access.redhat.com/security/cve/CVE-2023-6134" source="CVE"/>
+  <reference ref_id="CVE-2023-6291" ref_url="https://access.redhat.com/security/cve/CVE-2023-6291" source="CVE"/>
+  <reference ref_id="CVE-2023-6484" ref_url="https://access.redhat.com/security/cve/CVE-2023-6484" source="CVE"/>
+  <reference ref_id="CVE-2023-6927" ref_url="https://access.redhat.com/security/cve/CVE-2023-6927" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.7 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.6, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+* redirect_uri validation logic that allows for a bypass of otherwise explicitly allowed hosts (CVE-2023-6291)
+* guava: insecure temporary directory creation (CVE-2023-2976)
+* jetty-server: OutOfMemoryError for large multipart without filename read via request.getParameter() (CVE-2023-26048)
+* jetty-server: Cookie parsing of quoted values can exfiltrate values from other cookies (CVE-2023-26049)
+* reflected XSS via wildcard in OIDC redirect_uri (CVE-2023-6134)
+* open redirect via &quot;form_post.jwt&quot; JARM response mode (CVE-2023-6927)
+* santuario: Private Key disclosure in debug-log output (CVE-2023-44483)
+* Log Injection during WebAuthn authentication or registration (CVE-2023-6484)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-02-13"/>
+   <updated date="2024-02-13"/>
+   <cve cvss3="5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L" cwe="CWE-770" href="https://access.redhat.com/security/cve/CVE-2023-26048" impact="moderate" public="20230418">CVE-2023-26048</cve>
+   <cve cvss3="5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N" cwe="CWE-1286" href="https://access.redhat.com/security/cve/CVE-2023-26049" impact="moderate" public="20230418">CVE-2023-26049</cve>
+   <cve cvss3="4.4/CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-552" href="https://access.redhat.com/security/cve/CVE-2023-2976" impact="low" public="20230614">CVE-2023-2976</cve>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-532" href="https://access.redhat.com/security/cve/CVE-2023-44483" impact="moderate" public="20231020">CVE-2023-44483</cve>
+   <cve cvss3="4.6/CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N" cwe="CWE-74-&gt;CWE-79" href="https://access.redhat.com/security/cve/CVE-2023-6134" impact="moderate" public="20231114">CVE-2023-6134</cve>
+   <cve cvss3="7.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:L" cwe="CWE-601" href="https://access.redhat.com/security/cve/CVE-2023-6291" impact="important" public="20231214">CVE-2023-6291</cve>
+   <cve cvss3="5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N" cwe="CWE-117" href="https://access.redhat.com/security/cve/CVE-2023-6484" impact="low" public="20231204">CVE-2023-6484</cve>
+   <cve cvss3="4.6/CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:U/C:L/I:L/A:N" cwe="CWE-601" href="https://access.redhat.com/security/cve/CVE-2023-6927" impact="moderate" public="20231218">CVE-2023-6927</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2215229" id="2215229">guava: insecure temporary directory creation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2236340" id="2236340">jetty-server: OutOfMemoryError for large multipart without filename read via request.getParameter()</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2236341" id="2236341">jetty-server: Cookie parsing of quoted values can exfiltrate values from other cookies</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2246070" id="2246070">santuario: Private Key disclosure in debug-log output</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2248423" id="2248423">keycloak: Log Injection during WebAuthn authentication or registration</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2249673" id="2249673">keycloak: reflected XSS via wildcard in OIDC redirect_uri</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2251407" id="2251407">keycloak: redirect_uri validation bypass</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2255027" id="2255027">keycloak: open redirect via &quot;form_post.jwt&quot; JARM response mode</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.12-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20240800001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.12-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20240800003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20241862" version="638">
+ <metadata>
+  <title>RHSA-2024:1862: Red Hat Single Sign-On 7.6.8 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:1862" ref_url="https://access.redhat.com/errata/RHSA-2024:1862" source="RHSA"/>
+  <reference ref_id="CVE-2023-6484" ref_url="https://access.redhat.com/security/cve/CVE-2023-6484" source="CVE"/>
+  <reference ref_id="CVE-2023-6544" ref_url="https://access.redhat.com/security/cve/CVE-2023-6544" source="CVE"/>
+  <reference ref_id="CVE-2024-1132" ref_url="https://access.redhat.com/security/cve/CVE-2024-1132" source="CVE"/>
+  <reference ref_id="CVE-2024-1249" ref_url="https://access.redhat.com/security/cve/CVE-2024-1249" source="CVE"/>
+  <reference ref_id="CVE-2024-1635" ref_url="https://access.redhat.com/security/cve/CVE-2024-1635" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.8 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.7, and includes bug fixes, security updates and
+enhancements which are linked to in the References.
+Security Fix(es):
+
+* Authorization Bypass (CVE-2023-6544)
+* Log Injection during WebAuthn authentication or registration (CVE-2023-6484)
+* path transversal in redirection validation (CVE-2024-1132)
+* unvalidated cross-origin messages in checkLoginIframe leads to DDoS (CVE-2024-1249)
+* undertow: Out-of-memory Error after several closed connections with wildfly-http-client protocol (CVE-2024-1635)
+
+For more details about the security issue(s), including the impact, a CVSS
+score, and other related information, refer to the CVE page(s) listed in the
+References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-04-16"/>
+   <updated date="2024-04-16"/>
+   <cve cvss3="5.3/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N" cwe="CWE-117" href="https://access.redhat.com/security/cve/CVE-2023-6484" impact="low" public="20231204">CVE-2023-6484</cve>
+   <cve cvss3="5.4/CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-625" href="https://access.redhat.com/security/cve/CVE-2023-6544" impact="moderate" public="20240416">CVE-2023-6544</cve>
+   <cve cvss3="8.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:H/I:H/A:N" cwe="CWE-22" href="https://access.redhat.com/security/cve/CVE-2024-1132" impact="important" public="20240416">CVE-2024-1132</cve>
+   <cve cvss3="7.4/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:N/I:N/A:H" cwe="CWE-346" href="https://access.redhat.com/security/cve/CVE-2024-1249" impact="important" public="20240416">CVE-2024-1249</cve>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H" cwe="CWE-400" href="https://access.redhat.com/security/cve/CVE-2024-1635" impact="important" public="20231027">CVE-2024-1635</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2248423" id="2248423">keycloak: Log Injection during WebAuthn authentication or registration</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2253116" id="2253116">keycloak: Authorization Bypass</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2262117" id="2262117">keycloak: path transversal in redirection validation</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2262918" id="2262918">keycloak: org.keycloak.protocol.oidc: unvalidated cross-origin messages in checkLoginIframe leads to DDoS</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2264928" id="2264928">undertow: Out-of-memory Error after several closed connections with wildfly-http-client protocol</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.13-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20241862001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.13-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20241862003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20243568" version="637">
+ <metadata>
+  <title>RHSA-2024:3568: Red Hat Single Sign-On 7.6.9 security update on RHEL 9 (Low)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:3568" ref_url="https://access.redhat.com/errata/RHSA-2024:3568" source="RHSA"/>
+  <reference ref_id="CVE-2024-4540" ref_url="https://access.redhat.com/security/cve/CVE-2024-4540" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.9 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.8, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+
+* exposure of sensitive information in Pushed Authorization Requests (PAR)
+KC_RESTART cookie (CVE-2024-4540)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Low</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-06-03"/>
+   <updated date="2024-06-03"/>
+   <cve cvss3="7.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N" cwe="CWE-315-&gt;CWE-200" href="https://access.redhat.com/security/cve/CVE-2024-4540" impact="low" public="20240603">CVE-2024-4540</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2279303" id="2279303">keycloak: exposure of sensitive information in Pushed Authorization Requests (PAR) KC_RESTART cookie</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.14-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20243568001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.14-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20243568003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20246495" version="637">
+ <metadata>
+  <title>RHSA-2024:6495: Red Hat Single Sign-On 7.6.10 security update on RHEL 9 (Moderate)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:6495" ref_url="https://access.redhat.com/errata/RHSA-2024:6495" source="RHSA"/>
+  <reference ref_id="CVE-2024-4629" ref_url="https://access.redhat.com/security/cve/CVE-2024-4629" source="CVE"/>
+  <reference ref_id="CVE-2024-5967" ref_url="https://access.redhat.com/security/cve/CVE-2024-5967" source="CVE"/>
+  <reference ref_id="CVE-2024-7341" ref_url="https://access.redhat.com/security/cve/CVE-2024-7341" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.10 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.9, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+* potential bypass of brute force protection (CVE-2024-4629)
+* session fixation in elytron saml adapters (CVE-2024-7341)
+* Leak of configured LDAP bind credentials through the Keycloak admin console (CVE-2024-5967)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Moderate</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-09-09"/>
+   <updated date="2024-09-09"/>
+   <cve cvss3="6.5/CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:L/A:N" cwe="CWE-837" href="https://access.redhat.com/security/cve/CVE-2024-4629" impact="low" public="20240903:1938">CVE-2024-4629</cve>
+   <cve cvss3="2.7/CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:L/I:N/A:N" cwe="CWE-276" href="https://access.redhat.com/security/cve/CVE-2024-5967" impact="low" public="20240613">CVE-2024-5967</cve>
+   <cve cvss3="7.1/CVSS:3.1/AV:N/AC:H/PR:L/UI:R/S:U/C:H/I:H/A:H" cwe="CWE-384" href="https://access.redhat.com/security/cve/CVE-2024-7341" impact="moderate" public="20240909:1348">CVE-2024-7341</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2276761" id="2276761">keycloak: potential bypass of brute force protection</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2292200" id="2292200">keycloak: Leak of configured LDAP bind credentials through the Keycloak admin console</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2302064" id="2302064">wildfly-elytron: org.keycloak/keycloak-services: session fixation in elytron saml adapters</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.16-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20246495001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.16-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20246495003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+<definition class="patch" id="oval:com.redhat.rhsa:def:20246880" version="636">
+ <metadata>
+  <title>RHSA-2024:6880: Red Hat Single Sign-On 7.6.11 security update on RHEL 9 (Important)</title>
+  <affected family="unix">
+   <platform>Red Hat Single Sign-On 7.6 for RHEL 9</platform>
+  </affected>
+  <reference ref_id="RHSA-2024:6880" ref_url="https://access.redhat.com/errata/RHSA-2024:6880" source="RHSA"/>
+  <reference ref_id="CVE-2024-8698" ref_url="https://access.redhat.com/security/cve/CVE-2024-8698" source="CVE"/>
+  <reference ref_id="CVE-2024-8883" ref_url="https://access.redhat.com/security/cve/CVE-2024-8883" source="CVE"/>
+  <description>Red Hat Single Sign-On 7.6 is a standalone server, based on the Keycloak project, that provides authentication and standards-based single sign-on capabilities for web and mobile applications.
+
+This release of Red Hat Single Sign-On 7.6.11 on RHEL 9 serves as a replacement for Red Hat Single Sign-On 7.6.10, and includes bug fixes and enhancements, which are documented in the Release Notes document linked to in the References.
+
+Security Fix(es):
+* Improper Verification of SAML Responses Leading to Privilege Escalation in Keycloak (CVE-2024-8698)
+* Vulnerable Redirect URI Validation Results in Open Redirec (CVE-2024-8883)
+
+For more details about the security issue(s), including the impact, a CVSS score, and other related information, refer to the CVE page(s) listed in the References section.</description>
+  <advisory from="secalert@redhat.com">
+   <severity>Important</severity>
+   <rights>Copyright 2024 Red Hat, Inc.</rights>
+   <issued date="2024-09-19"/>
+   <updated date="2024-09-19"/>
+   <cve cvss3="7.7/CVSS:3.1/AV:N/AC:H/PR:L/UI:N/S:C/C:H/I:L/A:L" cwe="CWE-347" href="https://access.redhat.com/security/cve/CVE-2024-8698" impact="important" public="20240919:1512">CVE-2024-8698</cve>
+   <cve cvss3="6.1/CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N" cwe="CWE-601" href="https://access.redhat.com/security/cve/CVE-2024-8883" impact="moderate" public="20240919:1513">CVE-2024-8883</cve>
+   <bugzilla href="https://bugzilla.redhat.com/2311641" id="2311641">keycloak-saml-core: Improper Verification of SAML Responses Leading to Privilege Escalation in Keycloak</bugzilla>
+   <bugzilla href="https://bugzilla.redhat.com/2312511" id="2312511">Keycloak: Vulnerable Redirect URI Validation Results in Open Redirec</bugzilla>
+   <affected_cpe_list>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6</cpe>
+    <cpe>cpe:/a:redhat:red_hat_single_sign_on:7.6::el9</cpe>
+   </affected_cpe_list>
+  </advisory>
+ </metadata>
+ <criteria operator="OR">
+  <criterion comment="Red Hat Enterprise Linux must be installed" test_ref="oval:com.redhat.rhsa:tst:20227411016"/>
+  <criteria operator="AND">
+   <criterion comment="Red Hat Enterprise Linux 9 is installed" test_ref="oval:com.redhat.rhsa:tst:20227411015"/>
+   <criteria operator="OR">
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak is earlier than 0:18.0.18-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20246880001"/>
+     <criterion comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411002"/>
+    </criteria>
+    <criteria operator="AND">
+     <criterion comment="rh-sso7-keycloak-server is earlier than 0:18.0.18-1.redhat_00001.1.el9sso" test_ref="oval:com.redhat.rhsa:tst:20246880003"/>
+     <criterion comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" test_ref="oval:com.redhat.rhsa:tst:20227411004"/>
+    </criteria>
+   </criteria>
+  </criteria>
+ </criteria>
+</definition>
+</definitions>
+<tests>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.3-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20227411001" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411002" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.3-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20227411003" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411004" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7 is earlier than 0:1-5.el9sso" id="oval:com.redhat.rhsa:tst:20227411005" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411003"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411003"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7 is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411006" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411003"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-runtime is earlier than 0:1-5.el9sso" id="oval:com.redhat.rhsa:tst:20227411007" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411004"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411003"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-runtime is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411008" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411004"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-javapackages-filesystem is earlier than 0:6.0.0-7.el9sso" id="oval:com.redhat.rhsa:tst:20227411009" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411005"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411004"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-javapackages-filesystem is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411010" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411005"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-javapackages-tools is earlier than 0:6.0.0-7.el9sso" id="oval:com.redhat.rhsa:tst:20227411011" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411006"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411004"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-javapackages-tools is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411012" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411006"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-python3-javapackages is earlier than 0:6.0.0-7.el9sso" id="oval:com.redhat.rhsa:tst:20227411013" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411007"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411004"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-python3-javapackages is signed with Red Hat redhatrelease2 key" id="oval:com.redhat.rhsa:tst:20227411014" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411007"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411002"/>
+</red-def:rpminfo_test>
+<red-def:rpmverifyfile_test check="at least one" comment="Red Hat Enterprise Linux 9 is installed" id="oval:com.redhat.rhsa:tst:20227411015" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411008"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411005"/>
+</red-def:rpmverifyfile_test>
+<red-def:rpmverifyfile_test check="none satisfy" comment="Red Hat Enterprise Linux must be installed" id="oval:com.redhat.rhsa:tst:20227411016" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411008"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20227411006"/>
+</red-def:rpmverifyfile_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.3-1.redhat_00002.1.el9sso" id="oval:com.redhat.rhsa:tst:20228963001" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20228963001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.3-1.redhat_00002.1.el9sso" id="oval:com.redhat.rhsa:tst:20228963003" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20228963001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.6-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20231045001" version="641">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20231045001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.6-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20231045003" version="641">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20231045001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.7-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20232707001" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20232707001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.7-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20232707003" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20232707001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.8-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20233885001" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20233885001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.8-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20233885003" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20233885001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.9-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20234920001" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20234920001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.9-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20234920003" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20234920001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.11-2.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20237484001" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20237484001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-2.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20237484003" version="639">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20237484001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.11-2.redhat_00003.1.el9sso" id="oval:com.redhat.rhsa:tst:20237855001" version="636">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20237855001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-2.redhat_00003.1.el9sso" id="oval:com.redhat.rhsa:tst:20237855003" version="636">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20237855001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.11-3.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20240096001" version="635">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20240096001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.11-3.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20240096003" version="635">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20240096001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.12-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20240800001" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20240800001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.12-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20240800003" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20240800001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.13-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20241862001" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20241862001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.13-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20241862003" version="638">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20241862001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.14-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20243568001" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20243568001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.14-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20243568003" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20243568001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.16-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20246495001" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20246495001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.16-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20246495003" version="637">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20246495001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak is earlier than 0:18.0.18-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20246880001" version="636">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411001"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20246880001"/>
+</red-def:rpminfo_test>
+<red-def:rpminfo_test check="at least one" comment="rh-sso7-keycloak-server is earlier than 0:18.0.18-1.redhat_00001.1.el9sso" id="oval:com.redhat.rhsa:tst:20246880003" version="636">
+ <red-def:object object_ref="oval:com.redhat.rhsa:obj:20227411002"/>
+ <red-def:state state_ref="oval:com.redhat.rhsa:ste:20246880001"/>
+</red-def:rpminfo_test>
+</tests>
+<objects>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411001" version="639">
+ <red-def:name>rh-sso7-keycloak</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411002" version="639">
+ <red-def:name>rh-sso7-keycloak-server</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411003" version="639">
+ <red-def:name>rh-sso7</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411004" version="639">
+ <red-def:name>rh-sso7-runtime</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411005" version="639">
+ <red-def:name>rh-sso7-javapackages-filesystem</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411006" version="639">
+ <red-def:name>rh-sso7-javapackages-tools</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpminfo_object id="oval:com.redhat.rhsa:obj:20227411007" version="639">
+ <red-def:name>rh-sso7-python3-javapackages</red-def:name>
+</red-def:rpminfo_object>
+<red-def:rpmverifyfile_object id="oval:com.redhat.rhsa:obj:20227411008" version="639">
+ <red-def:behaviors noconfigfiles="true" noghostfiles="true" nogroup="true" nolinkto="true" nomd5="true" nomode="true" nomtime="true" nordev="true" nosize="true" nouser="true"/>
+ <red-def:name operation="pattern match"/>
+ <red-def:epoch operation="pattern match"/>
+ <red-def:version operation="pattern match"/>
+ <red-def:release operation="pattern match"/>
+ <red-def:arch operation="pattern match"/>
+ <red-def:filepath>/etc/redhat-release</red-def:filepath>
+</red-def:rpmverifyfile_object>
+</objects>
+<states>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20227411001" version="639">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.3-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20227411002" version="639">
+ <red-def:signature_keyid operation="equals">199e2f91fd431d51</red-def:signature_keyid>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20227411003" version="639">
+ <red-def:arch datatype="string" operation="equals">x86_64</red-def:arch>
+ <red-def:evr datatype="evr_string" operation="less than">0:1-5.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20227411004" version="639">
+ <red-def:evr datatype="evr_string" operation="less than">0:6.0.0-7.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpmverifyfile_state id="oval:com.redhat.rhsa:ste:20227411005" version="639">
+ <red-def:name operation="pattern match">^redhat-release</red-def:name>
+ <red-def:version operation="pattern match">^9[^\d]</red-def:version>
+</red-def:rpmverifyfile_state>
+<red-def:rpmverifyfile_state id="oval:com.redhat.rhsa:ste:20227411006" version="639">
+ <red-def:name operation="pattern match">^redhat-release</red-def:name>
+</red-def:rpmverifyfile_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20228963001" version="637">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.3-1.redhat_00002.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20231045001" version="641">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.6-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20232707001" version="638">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.7-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20233885001" version="638">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.8-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20234920001" version="638">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.9-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20237484001" version="639">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.11-2.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20237855001" version="636">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.11-2.redhat_00003.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20240096001" version="635">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.11-3.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20240800001" version="637">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.12-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20241862001" version="638">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.13-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20243568001" version="637">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.14-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20246495001" version="637">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.16-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+<red-def:rpminfo_state id="oval:com.redhat.rhsa:ste:20246880001" version="636">
+ <red-def:evr datatype="evr_string" operation="less than">0:18.0.18-1.redhat_00001.1.el9sso</red-def:evr>
+</red-def:rpminfo_state>
+</states>
+</oval_definitions>
